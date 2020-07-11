@@ -29,21 +29,22 @@ let app =new Vue({
       msg: 'Welcome to Your Vue.js App',
       title: 'TodoMVC ',
       newTodo: '',
-    todos:JSON.parse(localStorage.getItem('todos')||'[]'),
+    // todos:JSON.parse(localStorage.getItem('todos')||'[]'),
+    todos:'',
 
     editedTodo:null,
     visibility:'all',
 
   },
-  watch:{
-    // 数组的深拷贝
-    todos:{
-      handler(newVal,oldVal){
-        localStorage.setItem('todos',JSON.stringify(newVal))
-      },
-      deep:true
-    },
-  },
+  // watch:{
+  //   // 数组的深拷贝
+  //   todos:{
+  //     handler(newVal,oldVal){
+  //       localStorage.setItem('todos',JSON.stringify(newVal))
+  //     },
+  //     deep:true
+  //   },
+  // },
 
 
   computed:{
